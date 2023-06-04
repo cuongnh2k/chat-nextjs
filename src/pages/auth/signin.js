@@ -62,6 +62,14 @@ const SignIn = () => {
                     required: true,
                     message: 'Vui lòng nhập email của bạn!',
                 },
+                {
+                    max: 50,
+                    message: 'Vui lòng nhập tối đa 50 ký tự!',
+                },
+                {
+                    pattern: /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/,
+                    message: 'Vui lòng nhập đúng định dạng email!',
+                },
             ]}
         >
             <Input/>
@@ -74,6 +82,30 @@ const SignIn = () => {
                 {
                     required: true,
                     message: 'Vui lòng nhập mật khẩu của bạn!',
+                },
+                {
+                    min: 8,
+                    message: 'Vui lòng nhập tối thiểu 8 ký tự!',
+                },
+                {
+                    max: 16,
+                    message: 'Vui lòng nhập tối đa 16 ký tự!',
+                },
+                {
+                    pattern: /\d/,
+                    message: 'Mật khẩu chứa ít nhất 1 ký tự số!',
+                },
+                {
+                    pattern: /[A-Z]/,
+                    message: 'Mật khẩu chứa ít nhất 1 ký tự chữ hoa!',
+                },
+                {
+                    pattern: /[a-z]/,
+                    message: 'Mật khẩu chứa ít nhất 1 ký tự chữ thường!',
+                },
+                {
+                    pattern: /[\W\_]/,
+                    message: 'Mật khẩu chứa ít nhất 1 ký tự đặc biệt!',
                 },
             ]}
         >

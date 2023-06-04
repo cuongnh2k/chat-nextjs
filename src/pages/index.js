@@ -2,11 +2,13 @@ import {useSession} from "next-auth/react";
 import Router from "next/router";
 import {useEffect} from "react";
 
-const Protected = () => {
+const Home = () => {
     const {status, data} = useSession();
 
     useEffect(() => {
-        if (status === "unauthenticated") Router.replace("/auth/signin");
+        if (status === "unauthenticated") {
+            Router.replace("/auth/signin");
+        }
     }, [status]);
 
     if (status === "authenticated")
@@ -20,4 +22,4 @@ const Protected = () => {
     return <div>loading</div>;
 };
 
-export default Protected;
+export default Home;

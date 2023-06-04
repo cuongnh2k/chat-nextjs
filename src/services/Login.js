@@ -8,7 +8,9 @@ export const Login = async (email, password) => {
             email: email,
             password: password
         },
-        headers: {'Content-Type': 'application/json'}
+        headers: {
+            'Content-Type': 'application/json',
+        }
     });
     return response.data;
 }
