@@ -1,6 +1,7 @@
 import {useSession} from "next-auth/react";
 import Router from "next/router";
 import {useEffect} from "react";
+import {Col, Row, Skeleton} from "antd";
 
 const Home = () => {
     const {status, data} = useSession();
@@ -13,13 +14,25 @@ const Home = () => {
 
     if (status === "authenticated")
         return (
-            <div>
-                This page is Protected for special people. like{"\n"}
-                {JSON.stringify(data.user, null, 2)}
-            </div>
+            <Row style={{
+                minHeight: '100%',
+                maxWidth: '100%'
+            }}>
+                <Col span={6} style={{
+                    border: 'solid 1px #aaa',
+                }}>
+                    1
+                </Col>
+                <Col span={18} style={{
+                    border: 'solid 1px #aaa',
+                }}>
+                    2
+                </Col>
+            </Row>
         );
 
-    return <div>loading</div>;
+    return <Skeleton/>
+
 };
 
 export default Home;

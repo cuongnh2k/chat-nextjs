@@ -2,12 +2,10 @@ import {signIn} from "next-auth/react";
 import {toast, ToastContainer} from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import Router from "next/router";
-import {Button, Checkbox, Form, Input} from 'antd';
+import {Button, Form, Input} from 'antd';
 import {useState} from "react";
 
 const SignIn = () => {
-
-    const [remember, setRemember] = useState(false)
     const [loading, setLoading] = useState(false)
 
     const onFinish = async (values) => {
@@ -47,7 +45,7 @@ const SignIn = () => {
             backgroundColor: 'whitesmoke'
         }}
         initialValues={{
-            remember: remember,
+            remember: true,
         }}
         onFinish={onFinish}
         onFinishFailed={onFinishFailed}
@@ -110,22 +108,6 @@ const SignIn = () => {
             ]}
         >
             <Input.Password/>
-        </Form.Item>
-
-        <Form.Item
-            name="remember"
-            valuePropName="checked"
-            wrapperCol={{
-                offset: 4,
-                span: 24,
-            }}
-        >
-            <Checkbox
-                checked={remember}
-                onChange={e => setRemember(e.target.checked)}
-            >
-                Nhớ
-            </Checkbox>
         </Form.Item>
 
         <Form.Item
