@@ -1,6 +1,6 @@
 import axios from "axios";
 
-export const login = async (email, password) => {
+export const login = async (email, password, userAgent) => {
     const response = await axios({
         method: 'post',
         url: `${process.env.COMMON_API}/auth/login`,
@@ -10,6 +10,7 @@ export const login = async (email, password) => {
         },
         headers: {
             'Content-Type': 'application/json',
+            'User-Agent': userAgent
         }
     });
     return response.data;

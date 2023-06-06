@@ -24,7 +24,6 @@ const SiderComponent = ({collapsed}) => {
     if (loading && products.length === 0) {
         return <Skeleton active/>
     }
-    console.log(loading, error, products)
 
     if (!helpers.isEmptyObject(error)) {
         return (

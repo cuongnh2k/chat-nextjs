@@ -13,6 +13,7 @@ const SignIn = () => {
         signIn("credentials", {
             email: values.email,
             password: values.password,
+            userAgent: window.navigator.userAgent,
             redirect: false,
         }).then(({ok, error}) => {
             setLoading(false)

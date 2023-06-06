@@ -12,8 +12,8 @@ export default NextAuth({
             type: "credentials",
             credentials: {},
             async authorize(credentials, req) {
-                const {email, password} = credentials;
-                const res = await login(email, password);
+                const {email, password, userAgent} = credentials;
+                const res = await login(email, password, userAgent);
                 const {message, errorCode, success, data} = res
                 if (!success) {
                     throw new Error(message);
