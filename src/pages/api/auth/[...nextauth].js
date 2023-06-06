@@ -1,7 +1,7 @@
 import NextAuth from "next-auth";
 import CredentialsProvider from "next-auth/providers/credentials";
-import {Login} from "@/services/Login";
 import jwt_decode from 'jwt-decode';
+import {login} from "@/services/login";
 
 export default NextAuth({
     session: {
@@ -13,7 +13,7 @@ export default NextAuth({
             credentials: {},
             async authorize(credentials, req) {
                 const {email, password} = credentials;
-                const res = await Login(email, password);
+                const res = await login(email, password);
                 const {message, errorCode, success, data} = res
                 if (!success) {
                     throw new Error(message);

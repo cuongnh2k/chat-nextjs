@@ -1,6 +1,6 @@
 import axios from "axios";
 
-export const Login = async (email, password) => {
+export const login = async (email, password) => {
     const response = await axios({
         method: 'post',
         url: `${process.env.COMMON_API}/auth/login`,

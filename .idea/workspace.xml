@@ -2,10 +2,28 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="86567a08-18c5-4e7f-886b-23a9113dab7e" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/src/assets/loading.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/assets/react.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/SiderComponent.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/common/404Page.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/common/SpinLoader.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/helpers/common.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/redux/actions/index.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/redux/reducers/product.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/redux/reducers/root.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/redux/reselect/product.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/redux/saga/index.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/redux/saga/product.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/redux/store.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/services/api.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Chat.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/ListChannel.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/api/auth/[...nextauth].js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/api/auth/[...nextauth].js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/pages/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/styles/globals.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/styles/globals.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/services/Login.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/services/login.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -30,7 +48,7 @@
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "WebServerToolWindowFactoryState": "false",
     "dart.analysis.tool.window.visible": "false",
-    "last_opened_file_path": "D:/ChatApplication/react-client",
+    "last_opened_file_path": "D:/cvg/goi3/ads-api",
     "node.js.detected.package.eslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
     "nodejs_package_manager_path": "npm",
@@ -38,6 +56,14 @@
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\chat-nextjs\src" />
+      <recent name="D:\chat-nextjs\src\redux" />
+      <recent name="D:\chat-nextjs\src\services" />
+      <recent name="D:\chat-nextjs\src\components" />
+    </key>
+  </component>
   <component name="RunManager">
     <configuration name="dev" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
       <package-json value="$PROJECT_DIR$/package.json" />
