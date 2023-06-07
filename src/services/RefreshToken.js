@@ -2,7 +2,8 @@ import axios from "axios";
 import jwt_decode from "jwt-decode";
 import {useSession} from "next-auth/react";
 
-export const RefreshToken = async () => {
+export const refreshToken = async () => {
+    // eslint-disable-next-line react-hooks/rules-of-hooks
     const {status, data, update} = useSession();
     const response = await axios({
         method: 'patch',

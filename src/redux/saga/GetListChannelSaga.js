@@ -1,7 +1,8 @@
 import {call, put, takeEvery} from 'redux-saga/effects';
 import {Api} from "@/services/Api";
 import * as actions from "../actions/GetListChannelAction";
-import {helpers} from "@/helpers/common";
+import {refreshToken} from "@/services/RefreshToken";
+import Router from "next/router";
 
 // redux saga chi viet theo generator function
 // redux saga : worker + watcher
@@ -12,30 +13,25 @@ export function* workerGetListChannelSaga() {
         // dispatch action start get data
         yield put(actions.startGetListChannel(true));
         // call data from api
-        const data = yield call(Api.getAllProducts);
-        if (!helpers.isEmptyObject(data)) {
-            // co data
-            if (data.hasOwnProperty('products')) {
-                yield put(actions.getListChannelSuccess(data['products']));
+        let count = 0
+        while (count < 2) {
+            count++
+            const data = yield call(Api.getListChannel);
+            if (data.success) {
+                // co data
+                yield put(actions.getListChannelSuccess(data['data']));
             } else {
-                yield put(actions.getListChannelFailure({
-                    cod: 404,
-                    mess: 'can not found data'
-                }))
+                if (!refreshToken()) {
+                    Router.replace("/auth/signin");
+                }
             }
-        } else {
-            yield put(actions.getListChannelFailure({
-                cod: 500,
-                mess: 'can not found data'
-            }));
         }
+        yield put(actions.stopGetListChannel(false));
     } catch (error) {
         yield put(actions.getListChannelFailure({
-            cod: 500,
-            mess: error
+            code: 500,
+            message: 'Mất kết nối mạng'
         }));
-    } finally {
-        yield put(actions.stopGetListChannel(false));
     }
 }
 
