@@ -1,10 +1,4 @@
 import * as types from "../actions/GetListChannelAction";
-import {
-    GET_LIST_CHANNEL_SUCCESS,
-    GET_LIST_CHANNEL_SUCCESS_FAILURE,
-    START_GET_LIST_CHANNEL,
-    STOP_GET_LIST_CHANNEL
-} from "../actions/GetListChannelAction";
 
 const defaultState = {
     loading: false,
@@ -12,7 +6,7 @@ const defaultState = {
     error: {}
 }
 export const productReducer = (state = defaultState, action) => {
-    switch(action.type){
+    switch (action.type) {
         case types.START_GET_LIST_CHANNEL:
             return {
                 ...state,
@@ -29,7 +23,7 @@ export const productReducer = (state = defaultState, action) => {
                 dataProducts: action.products,
                 error: {}
             }
-        case types.GET_LIST_CHANNEL_SUCCESS_FAILURE:
+        case types.GET_LIST_CHANNEL_FAILURE:
             return {
                 ...state,
                 error: action.errors

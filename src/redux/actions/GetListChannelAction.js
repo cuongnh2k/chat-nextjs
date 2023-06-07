@@ -24,9 +24,9 @@ export const GetListChannelSuccess = (products) => ({
     products
 });
 
-export const GET_LIST_CHANNEL_SUCCESS_FAILURE = 'GET_LIST_CHANNEL_SUCCESS_FAILURE';
+export const GET_LIST_CHANNEL_FAILURE = 'GET_LIST_CHANNEL_FAILURE';
 export const GetListChannelFailure = (errors) => ({
-    type: GET_LIST_CHANNEL_SUCCESS_FAILURE,
+    type: GET_LIST_CHANNEL_FAILURE,
     errors
 });
 
