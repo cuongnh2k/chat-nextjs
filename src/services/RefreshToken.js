@@ -1,20 +1,27 @@
 import axios from "axios";
-import {session} from "next-auth/core/routes";
 import jwt_decode from "jwt-decode";
+import {useSession} from "next-auth/react";
 
 export const RefreshToken = async () => {
+    const {status, data, update} = useSession();
     const response = await axios({
         method: 'patch',
         url: `${process.env.COMMON_API}/auth/refresh-token`,
         headers: {
-            'Authorization': session.user.refreshToken
+            'Authorization': data.refreshToken,
+            'Content-Type': 'application/json',
+            'User-Agent': window.navigator.userAgent,
         }
     });
-    const {message, errorCode, success, data} = response.data
-    if (success) {
-        session.user.accessToken = data.accessToken;
-        const decoded = jwt_decode(data.accessToken);
-        session.user.account = decoded.account;
+
+    if (response.data.success) {
+        const decoded = jwt_decode(response.data.data.accessToken);
+
+        await update({
+            accessToken: response.data.data.accessToken,
+            refreshToken: response.data.data.refreshToken,
+            account: decoded.account,
+        })
         return true
     }
     return false;

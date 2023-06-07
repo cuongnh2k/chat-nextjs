@@ -1,7 +1,7 @@
 import NextAuth from "next-auth";
 import CredentialsProvider from "next-auth/providers/credentials";
 import jwt_decode from 'jwt-decode';
-import {login} from "@/services/login";
+import {Login} from "@/services/Login";
 
 export default NextAuth({
     session: {
@@ -13,7 +13,7 @@ export default NextAuth({
             credentials: {},
             async authorize(credentials, req) {
                 const {email, password, userAgent} = credentials;
-                const res = await login(email, password, userAgent);
+                const res = await Login(email, password, userAgent);
                 const {message, errorCode, success, data} = res
                 if (!success) {
                     throw new Error(message);
@@ -39,10 +39,11 @@ export default NextAuth({
             return token
         },
         async session({session, token}) {
-            session.user.accessToken = token.accessToken;
-            session.user.refreshToken = token.refreshToken;
             const decoded = jwt_decode(token.accessToken);
-            session.user.account = decoded.account;
+
+            session.accessToken = token.accessToken;
+            session.refreshToken = token.refreshToken;
+            session.account = decoded.account;
             return session
         }
     },

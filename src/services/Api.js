@@ -6,6 +6,6 @@ const getAllProducts = async () => {
     return response.status === 200 ? response.data : {};
 }
 
-export const api = {
+export const Api = {
     getAllProducts,
 }

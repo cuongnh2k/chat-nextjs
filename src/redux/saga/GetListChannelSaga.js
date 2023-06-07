@@ -1,5 +1,5 @@
 import {call, put, takeEvery} from 'redux-saga/effects';
-import {api} from "@/services/api";
+import {Api} from "@/services/Api";
 import * as actions from "../actions/GetListChannelAction";
 import {helpers} from "@/helpers/common";
 
@@ -12,7 +12,7 @@ export function* workerGetListChannelSaga() {
         // dispatch action start get data
         yield put(actions.startGetListChannel(true));
         // call data from api
-        const data = yield call(api.getAllProducts);
+        const data = yield call(Api.getAllProducts);
         if (!helpers.isEmptyObject(data)) {
             // co data
             if (data.hasOwnProperty('products')) {
