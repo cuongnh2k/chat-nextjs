@@ -2,7 +2,6 @@ import {call, put, takeEvery} from 'redux-saga/effects';
 import {api} from "@/services/api";
 import * as actions from "../actions/GetListChannelAction";
 import {helpers} from "@/helpers/common";
-import {requestGetListChannel} from "../actions/GetListChannelAction";
 
 // redux saga chi viet theo generator function
 // redux saga : worker + watcher
@@ -17,21 +16,21 @@ export function* workerGetListChannelSaga() {
         if (!helpers.isEmptyObject(data)) {
             // co data
             if (data.hasOwnProperty('products')) {
-                yield put(actions.GetListChannelSuccess(data['products']));
+                yield put(actions.getListChannelSuccess(data['products']));
             } else {
-                yield put(actions.GetListChannelFailure({
+                yield put(actions.getListChannelFailure({
                     cod: 404,
                     mess: 'can not found data'
                 }))
             }
         } else {
-            yield put(actions.GetListChannelFailure({
+            yield put(actions.getListChannelFailure({
                 cod: 500,
                 mess: 'can not found data'
             }));
         }
     } catch (error) {
-        yield put(actions.GetListChannelFailure({
+        yield put(actions.getListChannelFailure({
             cod: 500,
             mess: error
         }));

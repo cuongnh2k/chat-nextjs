@@ -19,13 +19,13 @@ export const stopGetListChannel = (stop) => ({
 });
 
 export const GET_LIST_CHANNEL_SUCCESS = 'GET_LIST_CHANNEL_SUCCESS';
-export const GetListChannelSuccess = (products) => ({
+export const getListChannelSuccess = (products) => ({
     type: GET_LIST_CHANNEL_SUCCESS,
     products
 });
 
 export const GET_LIST_CHANNEL_FAILURE = 'GET_LIST_CHANNEL_FAILURE';
-export const GetListChannelFailure = (errors) => ({
+export const getListChannelFailure = (errors) => ({
     type: GET_LIST_CHANNEL_FAILURE,
     errors
 });

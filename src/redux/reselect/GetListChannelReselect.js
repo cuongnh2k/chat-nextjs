@@ -1,6 +1,6 @@
-import { createSelector } from 'reselect';
+import {createSelector} from 'reselect';
 
-const stateProducts = state => state.product;
+const stateProducts = state => state.getListChannelReducer;
 // toan bo state trong phan product
 
 export const getLoadingProduct = createSelector(

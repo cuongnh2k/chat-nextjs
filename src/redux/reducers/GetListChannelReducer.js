@@ -5,7 +5,7 @@ const defaultState = {
     dataProducts: [],
     error: {}
 }
-export const productReducer = (state = defaultState, action) => {
+export const getListChannelReducer = (state = defaultState, action) => {
     switch (action.type) {
         case types.START_GET_LIST_CHANNEL:
             return {
