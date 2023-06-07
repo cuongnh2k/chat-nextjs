@@ -1,22 +1,21 @@
 import {createSelector} from 'reselect';
 
-const stateListChannel = state => state.getListChannelReducer;
+const stateData = state => state.getListChannelReducer;
 // toan bo state trong phan product
 
-export const getLoadingProduct = createSelector(
-    stateListChannel,
+export const getLoading = createSelector(
+    stateData,
     state => state.loading
 )
-export const getErrorProduct = createSelector(
-    stateListChannel,
+export const getError = createSelector(
+    stateData,
     state => state.error
 )
-const getAllDataProducts = createSelector(
-    stateListChannel,
-    state => state.data
-)
 export const getData = createSelector(
-    getAllDataProducts,
+    createSelector(
+        stateData,
+        state => state.data
+    ),
     data => {
         return data.map(item => ({
             id: item.id,

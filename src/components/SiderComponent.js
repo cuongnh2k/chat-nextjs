@@ -16,8 +16,8 @@ const SiderComponent = ({collapsed}) => {
     }, [dispatch])
 
     const {loading, error, data} = useSelector(createStructuredSelector({
-        loading: selector.getLoadingProduct,
-        error: selector.getErrorProduct,
+        loading: selector.getLoading,
+        error: selector.getError,
         data: selector.getData
     }))
 
