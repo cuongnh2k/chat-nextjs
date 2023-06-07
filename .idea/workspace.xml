@@ -3,14 +3,8 @@
   <component name="ChangeListManager">
     <list default="true" id="86567a08-18c5-4e7f-886b-23a9113dab7e" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/SiderComponent.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/SiderComponent.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/redux/actions/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/redux/actions/GetListChannelAction.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/redux/reducers/product.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/redux/reducers/GetListChannelReducer.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/redux/reducers/root.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/redux/reducers/root.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/redux/reselect/product.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/redux/reselect/GetListChannelReselect.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/redux/saga/GetListChannelSaga.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/redux/saga/GetListChannelSaga.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/redux/saga/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/redux/saga/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/redux/saga/product.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/redux/saga/GetListChannelSaga.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />

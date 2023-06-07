@@ -6,7 +6,7 @@ import {helpers} from "@/helpers/common";
 // redux saga chi viet theo generator function
 // redux saga : worker + watcher
 // 1 - worker
-export function* getAllproductSaga() {
+export function* workerGetListChannelSaga() {
     // generator function
     try {
         // dispatch action start get data
@@ -40,6 +40,6 @@ export function* getAllproductSaga() {
 }
 
 // 2 - watcher
-export function* watchGetAllProductSaga() {
-    yield takeEvery(actions.REQUEST_DATA_PRODUCTS, getAllproductSaga);
+export function* watchGetListChannelSaga() {
+    yield takeEvery(actions.REQUEST_DATA_PRODUCTS, workerGetListChannelSaga);
 }
