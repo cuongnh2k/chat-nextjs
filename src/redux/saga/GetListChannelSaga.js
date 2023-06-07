@@ -41,5 +41,5 @@ export function* workerGetListChannelSaga() {
 
 // 2 - watcher
 export function* watchGetListChannelSaga() {
-    yield takeEvery(actions.REQUEST_DATA_PRODUCTS, workerGetListChannelSaga);
+    yield takeEvery(actions.REQUEST_GET_LIST_CHANNEL, workerGetListChannelSaga);
 }
