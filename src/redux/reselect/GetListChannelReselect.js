@@ -13,7 +13,7 @@ export const getErrorProduct = createSelector(
 )
 const getAllDataProducts = createSelector(
     stateListChannel,
-    state => state.dataProducts
+    state => state.data
 )
 export const getData = createSelector(
     getAllDataProducts,

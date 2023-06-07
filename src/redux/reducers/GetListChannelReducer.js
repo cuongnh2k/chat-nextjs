@@ -2,7 +2,7 @@ import * as types from "../actions/GetListChannelAction";
 
 const defaultState = {
     loading: false,
-    dataProducts: [],
+    data: [],
     error: {}
 }
 export const getListChannelReducer = (state = defaultState, action) => {
@@ -20,7 +20,7 @@ export const getListChannelReducer = (state = defaultState, action) => {
         case types.GET_LIST_CHANNEL_SUCCESS:
             return {
                 ...state,
-                dataProducts: action.products,
+                data: action.data,
                 error: {}
             }
         case types.GET_LIST_CHANNEL_FAILURE:

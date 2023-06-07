@@ -19,9 +19,9 @@ export const stopGetListChannel = (stop) => ({
 });
 
 export const GET_LIST_CHANNEL_SUCCESS = 'GET_LIST_CHANNEL_SUCCESS';
-export const getListChannelSuccess = (products) => ({
+export const getListChannelSuccess = (data) => ({
     type: GET_LIST_CHANNEL_SUCCESS,
-    products
+    data
 });
 
 export const GET_LIST_CHANNEL_FAILURE = 'GET_LIST_CHANNEL_FAILURE';

@@ -15,13 +15,13 @@ const SiderComponent = ({collapsed}) => {
         dispatch(actions.requestGetListChannel());
     }, [dispatch])
 
-    const {loading, error, products} = useSelector(createStructuredSelector({
+    const {loading, error, data} = useSelector(createStructuredSelector({
         loading: selector.getLoadingProduct,
         error: selector.getErrorProduct,
-        products: selector.getData
+        data: selector.getData
     }))
 
-    if (loading && products.length === 0) {
+    if (loading && data.length === 0) {
         return <Skeleton active/>
     }
 
@@ -59,7 +59,7 @@ const SiderComponent = ({collapsed}) => {
             //         label: 'nav 3',
             //     },
             // ]}
-            items={products.map((items, index) => ({key: index, icon: <UploadOutlined/>, label: items.title}))}
+            items={data.map((items, index) => ({key: index, icon: <UploadOutlined/>, label: items.title}))}
         />
     </Sider>
 }
