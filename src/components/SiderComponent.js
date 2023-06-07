@@ -12,7 +12,7 @@ const SiderComponent = ({collapsed}) => {
     const dispatch = useDispatch();
 
     useEffect(() => {
-        dispatch(actions.requestDataProducts());
+        dispatch(actions.requestGetListChannel());
     }, [dispatch])
 
     const {loading, error, products} = useSelector(createStructuredSelector({
