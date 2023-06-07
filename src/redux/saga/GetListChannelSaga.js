@@ -1,6 +1,6 @@
 import {call, put, takeEvery} from 'redux-saga/effects';
 import {api} from "@/services/api";
-import * as actions from "../actions/index";
+import * as actions from "../actions/GetListChannelAction";
 import {helpers} from "@/helpers/common";
 
 // redux saga chi viet theo generator function

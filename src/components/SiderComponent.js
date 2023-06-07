@@ -2,9 +2,9 @@ import React, {useEffect} from "react";
 import {useDispatch, useSelector} from "react-redux";
 import {Alert, Layout, Menu, Skeleton} from 'antd';
 import {createStructuredSelector} from 'reselect';
-import * as selector from 'src/redux/reselect/product.js';
+import * as selector from '@/redux/reselect/GetListChannelReselect.js';
 import {UploadOutlined} from "@ant-design/icons";
-import * as actions from "@/redux/actions";
+import * as actions from "@/redux/actions/GetListChannelAction";
 import {helpers} from "@/helpers/common";
 
 const {Header, Sider, Content} = Layout;
